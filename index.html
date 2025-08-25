@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christoper Atkins — Game Programmer</title>
+  <meta name="description" content="Game programmer portfolio: projects, skills, and contact information." />
+  <link rel="icon" href="/favicon.ico" />
+  <meta property="og:title" content="Christoper Atkins — Game Programmer" />
+  <meta property="og:description" content="Projects, skills, experience, and ways to get in touch." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+  <style>
+    :root{--bg:#ffffff;--text:#0f172a;--muted:#475569;--card:#f8fafc;--border:#e2e8f0;--brand:#2563eb;--brand-contrast:#ffffff}
+    @media (prefers-color-scheme: dark){:root{--bg:#0b1220;--text:#e5e7eb;--muted:#94a3b8;--card:#0f172a;--border:#1f2937;--brand:#60a5fa;--brand-contrast:#0b1220}}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1040px;margin:0 auto;padding:0 20px}
+    /* Header */
+    header{position:sticky;top:0;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav a.brand{font-weight:700;letter-spacing:.2px}
+    .nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+    .nav li a{padding:8px 10px;border-radius:10px}
+    .nav li a:focus-visible{outline:2px solid var(--brand)}
+
+    /* Hero */
+    .hero{padding:72px 0 40px}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 24px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--brand);border-color:var(--brand);color:var(--brand-contrast)}
+    .btn:hover{text-decoration:none;transform:translateY(-1px)}
+
+    /* Sections */
+    section{padding:56px 0;border-top:1px solid var(--border)}
+    section h2{font-size:clamp(22px,3.5vw,32px);margin:0 0 20px}
+    .muted{color:var(--muted)}
+
+    /* Projects */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px}
+    .card h3{margin:0 0 4px;font-size:18px}
+    .stack{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{font-size:12px;border:1px solid var(--border);padding:4px 8px;border-radius:999px;color:var(--muted)}
+    .links{margin-top:auto;display:flex;gap:12px}
+
+    /* About */
+    .about{display:grid;grid-template-columns:280px 1fr;gap:24px;align-items:start}
+    @media (max-width:900px){.about{grid-template-columns:1fr}}
+    .avatar{width:100%;max-width:220px;aspect-ratio:1/1;border-radius:16px;border:1px solid var(--border);background:var(--card)}
+
+    /* Contact */
+    .contact-list{display:flex;flex-wrap:wrap;gap:14px}
+
+    footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="#top">Your Name</a>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero" aria-labelledby="intro-title">
+      <h1 id="intro-title">Software Developer building clean, reliable experiences.</h1>
+      <p class="muted">I design and develop pragmatic solutions across web, games, and tools. Here are a few projects I’m proud of.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn" href="#contact" aria-label="Jump to contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Featured Projects</h2>
+      <p class="muted">Keep it to 3–6 high‑impact projects with clear outcomes.</p>
+      <div class="grid">
+        <article class="card" aria-labelledby="p1-title">
+          <h3 id="p1-title">Project One</h3>
+          <p>A concise, user‑focused description of what it does and why it matters. Include a result if possible.</p>
+          <div class="stack">
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Node</span>
+          </div>
+          <div class="links">
+            <a href="#" aria-label="View live demo for Project One">Live Demo</a>
+            <a href="#" aria-label="View GitHub repo for Project One">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="p2-title">
+          <h3 id="p2-title">Project Two</h3>
+          <p>State the problem, your approach, and the impact. Keep it short; link to details in the repo.</p>
+          <div class="stack">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">Burst/Jobs</span>
+          </div>
+          <div class="links">
+            <a href="#">Live Demo</a>
+            <a href="#">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="p3-title">
+          <h3 id="p3-title">Project Three</h3>
+          <p>What did <em>you</em> do? Mention performance wins, users served, or reliability improvements.</p>
+          <div class="stack">
+            <span class="tag">Go</span>
+            <span class="tag">Postgres</span>
+            <span class="tag">Docker</span>
+          </div>
+          <div class="links">
+            <a href="#">Live Demo</a>
+            <a href="#">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div class="about">
+        <img class="avatar" src="avatar.jpg" alt="Headshot of Your Name" />
+        <div>
+          <p>Short professional bio (2–3 sentences). Focus on what you build, who you help, and what you’re best at.</p>
+          <p class="muted">Recent highlights: shipped X feature to Y users; improved build times by Z%; taught A/B/C.</p>
+          <div class="stack" aria-label="Skills">
+            <span class="tag">C#</span>
+            <span class="tag">Unity</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Tailwind</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p class="muted">Best ways to reach me.</p>
+      <div class="contact-list">
+        <a class="btn" href="mailto:cddatkins@example.com">Email</a>
+        <a class="btn" href="https://github.com/cddatkins" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/cddatkins" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://x.com/katajin31309" target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

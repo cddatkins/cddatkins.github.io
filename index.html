@@ -11,75 +11,30 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://example.com" />
   <meta property="og:image" content="https://example.com/og-image.jpg" />
-  <style>
-    :root{--bg:#ffffff;--text:#0f172a;--muted:#475569;--card:#f8fafc;--border:#e2e8f0;--brand:#2563eb;--brand-contrast:#ffffff}
-    @media (prefers-color-scheme: dark){:root{--bg:#0b1220;--text:#e5e7eb;--muted:#94a3b8;--card:#0f172a;--border:#1f2937;--brand:#60a5fa;--brand-contrast:#0b1220}}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Cantarell,Noto Sans,sans-serif}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1040px;margin:0 auto;padding:0 20px}
-    /* Header */
-    header{position:sticky;top:0;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border);z-index:10}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .nav a.brand{font-weight:700;letter-spacing:.2px}
-    .nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
-    .nav li a{padding:8px 10px;border-radius:10px}
-    .nav li a:focus-visible{outline:2px solid var(--brand)}
-
-    /* Hero */
-    .hero{padding:72px 0 40px}
-    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:0 0 12px}
-    .hero p{color:var(--muted);margin:0 0 24px}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);text-decoration:none;font-weight:600}
-    .btn-primary{background:var(--brand);border-color:var(--brand);color:var(--brand-contrast)}
-    .btn:hover{text-decoration:none;transform:translateY(-1px)}
-
-    /* Sections */
-    section{padding:56px 0;border-top:1px solid var(--border)}
-    section h2{font-size:clamp(22px,3.5vw,32px);margin:0 0 20px}
-    .muted{color:var(--muted)}
-
-    /* Projects */
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:640px){.grid{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px}
-    .card h3{margin:0 0 4px;font-size:18px}
-    .stack{display:flex;flex-wrap:wrap;gap:6px}
-    .tag{font-size:12px;border:1px solid var(--border);padding:4px 8px;border-radius:999px;color:var(--muted)}
-    .links{margin-top:auto;display:flex;gap:12px}
-
-    /* About */
-    .about{display:grid;grid-template-columns:280px 1fr;gap:24px;align-items:start}
-    @media (max-width:900px){.about{grid-template-columns:1fr}}
-    .avatar{width:100%;max-width:220px;aspect-ratio:1/1;border-radius:16px;border:1px solid var(--border);background:var(--card)}
-
-    /* Contact */
-    .contact-list{display:flex;flex-wrap:wrap;gap:14px}
-
-    footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="darkmode.js" defer></script>
 </head>
 <body>
   <header>
     <nav class="container nav" aria-label="Main">
-      <a class="brand" href="#top">Your Name</a>
+      <a class="brand" href="#top">Christoper Atkins</a>
       <ul>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+        <li><a href="ChristoperAtkinsResume.pdf" target="_blank" rel="noopener">Résumé</a></li>
       </ul>
+      <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>      
+    </button>
     </nav>
   </header>
 
   <main id="top" class="container">
     <section class="hero" aria-labelledby="intro-title">
-      <h1 id="intro-title">Software Developer building clean, reliable experiences.</h1>
-      <p class="muted">I design and develop pragmatic solutions across web, games, and tools. Here are a few projects I’m proud of.</p>
+      <h1 id="intro-title">Game Programmer</h1>
+      <p class="muted">I design and develop pragmatic solutions for various parts of the game development process. Here are a few projects I’ve worked on.</p>
       <div class="buttons">
         <a class="btn btn-primary" href="#projects">View Projects</a>
         <a class="btn" href="#contact" aria-label="Jump to contact">Get in touch</a>
@@ -87,48 +42,53 @@
     </section>
 
     <section id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Featured Projects</h2>
-      <p class="muted">Keep it to 3–6 high‑impact projects with clear outcomes.</p>
+      <h2 id="projects-title">Projects</h2>
+      <!--<p class="muted">Keep it to 3–6 high‑impact projects with clear outcomes.</p>-->
       <div class="grid">
         <article class="card" aria-labelledby="p1-title">
-          <h3 id="p1-title">Project One</h3>
-          <p>A concise, user‑focused description of what it does and why it matters. Include a result if possible.</p>
+          <h3 id="p1-title">Primrows</h3>
+          <img class="project-logo" src="/projectImages/primrowslogo.png" alt="Screenshot from Primrows" />
+          <div class="paragraph">
+            <strong>Primrows</strong> is a game where you grow, prune, and cultivate your garden in a game of logic, chance, and pattern recognition.
+          </div>
           <div class="stack">
-            <span class="tag">TypeScript</span>
-            <span class="tag">React</span>
-            <span class="tag">Node</span>
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">Jira</span>
           </div>
           <div class="links">
-            <a href="#" aria-label="View live demo for Project One">Live Demo</a>
-            <a href="#" aria-label="View GitHub repo for Project One">GitHub</a>
+            <a href="https://store.steampowered.com/app/2903530/Primrows/" aria-label="View Steam Page for Primrows">Steam Page</a>
           </div>
         </article>
 
         <article class="card" aria-labelledby="p2-title">
-          <h3 id="p2-title">Project Two</h3>
-          <p>State the problem, your approach, and the impact. Keep it short; link to details in the repo.</p>
+          <h3 id="p2-title">Whisker Squadron</h3>
+          <img class="project-logo" src="/projectImages/WhiskerSquadronLogo.jpg" alt="Screenshot from Whisker Squadron" />
+          <div class="paragraph">
+            <strong>Whisker Squadron</strong> is an intense roguelike shooter from the creators of RACE THE SUN.
+          </div>
           <div class="stack">
             <span class="tag">Unity</span>
             <span class="tag">C#</span>
-            <span class="tag">Burst/Jobs</span>
+            <span class="tag">SVN</span>
           </div>
           <div class="links">
-            <a href="#">Live Demo</a>
-            <a href="#">GitHub</a>
+            <a href="https://store.steampowered.com/app/2140100/Whisker_Squadron_Survivors/" aria-label="View Steam Page for Whisker Squadron">Steam Page</a>
           </div>
         </article>
 
         <article class="card" aria-labelledby="p3-title">
-          <h3 id="p3-title">Project Three</h3>
-          <p>What did <em>you</em> do? Mention performance wins, users served, or reliability improvements.</p>
+          <h3 id="p3-title">Indie Pogo</h3>
+          <img class="project-logo" src="/projectImages/IndiePogoLogo.png" alt="Screenshot from Indie Pogo" />
+          <div class="paragraph">
+            <strong>Indie Pogo</strong> is a unique, retro-inspired fighting crossover game!
+          </div>
           <div class="stack">
-            <span class="tag">Go</span>
-            <span class="tag">Postgres</span>
-            <span class="tag">Docker</span>
+            <span class="tag">GameMaker Studio</span>
+            <span class="tag">GML</span>
           </div>
           <div class="links">
-            <a href="#">Live Demo</a>
-            <a href="#">GitHub</a>
+            <a href="https://store.steampowered.com/app/818210/Indie_Pogo/" aria-label="View Steam Page for Indie Pogo">Steam Page</a>
           </div>
         </article>
       </div>
@@ -137,17 +97,16 @@
     <section id="about" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <div class="about">
-        <img class="avatar" src="avatar.jpg" alt="Headshot of Your Name" />
+        <img class="avatar" src="profile.jpg" alt="Headshot of Your Name" />
         <div>
-          <p>Short professional bio (2–3 sentences). Focus on what you build, who you help, and what you’re best at.</p>
-          <p class="muted">Recent highlights: shipped X feature to Y users; improved build times by Z%; taught A/B/C.</p>
+          <p>Since 2016, I’ve been developing games primarily with Unity and C#, and I’m always eager to take on new tools and challenges.</p>
           <div class="stack" aria-label="Skills">
             <span class="tag">C#</span>
             <span class="tag">Unity</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">React</span>
-            <span class="tag">Next.js</span>
-            <span class="tag">Tailwind</span>
+            <span class="tag">GameMaker Studio</span>
+            <span class="tag">Jira</span>
+            <span class="tag">Git</span>
+            <span class="tag">SVN</span>
           </div>
         </div>
       </div>
@@ -167,7 +126,7 @@
 
   <footer>
     <div class="container">
-      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <p>© <span id="year"></span> Christopher Atkins. All rights reserved.</p>
     </div>
   </footer>
 

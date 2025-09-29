@@ -30,23 +30,25 @@ body.dark {
     align-items: center;
 }
 
-#dark-mode-toggle svg
+#dark-mode-toggle img
 {
     fill: var(--bg);
 }
 
-#dark-mode-toggle svg:last-child
+#dark-mode-toggle img:last-child
 {
     display: none
 }
-.dark #dark-mode-toggle svg:first-child
+.dark #dark-mode-toggle img:first-child
 {
     display: none
 }
-.dark #dark-mode-toggle svg:last-child
+.dark #dark-mode-toggle img:last-child
 {
     display: block
 }
+
+
 
 @media (prefers-color-scheme: dark)
 {
